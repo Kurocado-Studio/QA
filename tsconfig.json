@@ -1,12 +1,16 @@
 {
+  "include": ["src", "tsup.config.ts"],
   "extends": ["@kurocado-studio/styleguide/tsconfig/node"],
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "./dist",
-    "esModuleInterop": true,
     "outDir": "./dist",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "rootDir": "./src"
+    "rootDir": ".",
+    "sourceMap": true
   },
   "exclude": ["prettier.config.js", "node_modules", "dist", "eslint.config.js"]
 }
